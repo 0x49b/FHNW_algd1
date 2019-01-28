@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = "Application"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile files {'lib/ch.fhnw.algd.sortdemo.algorithms.algd.jar'}
+	compile files {'lib/ch.fhnw.algd.sortdemo.awt.numericalview.jar'}
+	compile files {'lib/ch.fhnw.algd.sortdemo.awt.simpleview.jar'}
+	compile files {'lib/ch.fhnw.algd.sortdemo.awt.window.jar'}
+	compile files {'lib/ch.fhnw.algd.sortdemo.framework.jar'}
+	compile files {'lib/ch.fhnw.algd.sortdemo.viewPicker.jar'}
+}

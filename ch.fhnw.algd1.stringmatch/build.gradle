@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+task testNaiveStringMatch1 (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the Naive String Match Task 1'
+	
+	include('ch/fhnw/algd1/stringmatch/NaiveStringMatch1Test.class')
+}
+
+task testNaiveStringMatch2 (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the Naive String Match Task 2'
+	
+	include('ch/fhnw/algd1/stringmatch/NaiveStringMatch2Test.class')
+}
+
+task testBoyerMooreHorspoolStringMatch (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the Boyer Moore Horspool Task'
+	
+	include('ch/fhnw/algd1/stringmatch/BoyerMooreHorspoolStringMatchTest.class')
+}

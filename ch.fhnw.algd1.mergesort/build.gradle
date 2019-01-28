@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+task testMergesortSimple (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the simple Merge Sort with ints'
+	
+	include('ch/fhnw/algd1/mergesort/MergesortSimpleTest.class')
+}
+
+task testMergesort (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the Merge Sort with Objects'
+	
+	include('ch/fhnw/algd1/mergesort/MergesortTest.class')
+}

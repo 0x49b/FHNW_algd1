@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+task testMaxSubSequence (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the task to find a maximum sub-sequence'
+	
+	include('ch/fhnw/algd1/maxsubsequence/*.class')
+}
+
+task testSimpleArrayList (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the task to implement a dynamic array list'
+	
+	include('ch/fhnw/algd1/simplearraylist/*.class')
+}

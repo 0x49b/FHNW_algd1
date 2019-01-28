@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = 'ch.fhnw.algd1.gcd.GcdMeasurement'
+
+task testIterative (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the iterative Gcd calculation'
+	
+	include('ch/fhnw/algd1/gcd/GcdIterTest.class')
+}
+
+task testRecursive (type: Test) {
+	group = 'verification'
+	description = 'Runs tests for the recursive Gcd calculation'
+	
+	include('ch/fhnw/algd1/gcd/GcdRecTest.class')
+}
