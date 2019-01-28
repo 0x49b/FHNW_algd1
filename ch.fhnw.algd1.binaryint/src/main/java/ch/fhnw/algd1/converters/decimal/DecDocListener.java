@@ -4,8 +4,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 
-import ch.fhnw.algd1.converters.base.AbstractDocListener;
 import ch.fhnw.algd1.converters.base.ConverterModel;
+import ch.fhnw.algd1.converters.base.AbstractDocListener;
 
 /*
  * Created on 05.09.2014

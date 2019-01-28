@@ -1,3 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Gradle template
 .gradle
 /build/
 
@@ -13,5 +15,6 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
+/out/
+*.iml
 .idea
-.DS_Store

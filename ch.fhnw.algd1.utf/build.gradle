@@ -1,6 +1,5 @@
 apply plugin: 'java'
 apply plugin: 'application'
-apply plugin: 'idea'
 
 mainClassName = "ch.fhnw.algd1.converters.ui.Application"
 
